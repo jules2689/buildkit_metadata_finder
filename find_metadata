@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require_relative 'bin/metadata_finder'
+
+header = "Finding all projects with metadata #{ARGV.join(",")}"
+puts header
+puts '=' * header.length
+
+projects = MetadataFinder.find(ARGV)
+projects.collect do |p|
+  puts "Name: #{p[:name]}"
+  puts "Repo: #{p[:repository]}"
+  puts "Url: #{p[:web_url]}\n"
+end
