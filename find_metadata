@@ -10,5 +10,5 @@ projects = MetadataFinder.find(ARGV)
 projects.collect do |p|
   puts "Name: #{p[:name]}"
   puts "Repo: #{p[:repository]}"
-  puts "Url: #{p[:web_url]}\n"
+  puts "Url: #{p[:web_url]}\n\n"
 end
